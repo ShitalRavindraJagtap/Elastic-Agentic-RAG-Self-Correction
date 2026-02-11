@@ -1,0 +1,12 @@
+PUT _inference/rerank/jina_reranker_v3
+{
+  "service": "jinaai",
+  "service_settings": {
+    "api_key": "<YOUR_JINA_API_KEY>",
+    "model_id": "jina-reranker-v3"
+  },
+  "task_settings": {
+    "top_n": 5,
+    "return_documents": true
+  }
+}
