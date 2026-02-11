@@ -1,0 +1,17 @@
+GET /agentic-knowledge-base/_search
+{
+  "retriever": {
+    "text_similarity_reranker": {
+      "retriever": {
+        "rrf": {
+          "retrievers": [
+            { "standard": { "query": { "match": { "text_data": "Agent Builder setup" } } } },
+            { "knn": { "field": "vector_data", "query_vector": [...], "k": 50, "num_candidates": 100 } }
+          ]
+        }
+      },
+      "field": "text_data",
+      "inference_id": "jina_reranker_v3"
+    }
+  }
+}
