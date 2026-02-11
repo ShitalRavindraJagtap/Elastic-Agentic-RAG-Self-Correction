@@ -1,0 +1,16 @@
+PUT /agentic-knowledge-base
+{
+  "mappings": {
+    "properties": {
+      "text_data": { "type": "text" },
+      "vector_data": {
+        "type": "dense_vector",
+        "dims": 1024,
+        "index": true,
+        "similarity": "cosine",
+        "index_options": { "type": "hnsw" }
+      },
+      "metadata_tags": { "type": "keyword" }
+    }
+  }
+}
