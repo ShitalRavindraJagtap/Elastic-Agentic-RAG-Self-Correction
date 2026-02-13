@@ -1,11 +1,10 @@
-🚀 Elastic Agentic RAG: Self-Correction with JinaAI Reranker v3
-This repository contains the official implementation of a Self-Correcting Agentic RAG system, submitted for the Elastic Blogathon 2026: Vectorized Thinking.
+# 🚀 Elastic Agentic RAG: Self-Correction with JinaAI Reranker v3 
 
-📖 Project Overview
-Standard RAG systems often suffer from hallucinations due to poor retrieval relevance. This project leverages Elastic Agent Builder to orchestrate a "Self-Correction" loop. By integrating JinaAI Reranker v3, the agent evaluates the quality of retrieved context in real-time. If the confidence score is too low, the agent autonomously refines the search query and attempts a second, high-precision retrieval pass.
+## 📖 Project Overview 
+Standard RAG systems often suffer from hallucinations due to poor retrieval relevance...
 
-Core Innovation: The Self-Correction Loop
-
+### **Core Innovation: The Self-Correction Loop**
+```mermaid
 graph TD
     A[User Query] --> B{Elastic Hybrid Search}
     B --> C[Top-K Results]
@@ -15,6 +14,9 @@ graph TD
     F --> B
     E -- Yes: High Confidence --> G[Final Context Delivered]
     G --> H[LLM Response Generation]
+    
+    style E fill:#f9f,stroke:#333,stroke-width:2px
+    style F fill:#ff9,stroke:#333,stroke-width:2px
     
     style E fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#ff9,stroke:#333,stroke-width:2px
