@@ -1,0 +1,5 @@
+elasticsearch
+jinaai
+python-dotenv
+pandas
+ipywidgets
