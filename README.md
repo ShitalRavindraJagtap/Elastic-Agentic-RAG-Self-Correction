@@ -1,9 +1,10 @@
-# 🚀 Elastic Agentic RAG: Self-Correction with JinaAI Reranker v3 
+# 🚀 Elastic Agentic RAG: Self-Correction with JinaAI Reranker v3
 
-## 📖 Project Overview 
-Standard RAG systems often suffer from hallucinations due to poor retrieval relevance...
+## 📖 Project Overview
+Standard RAG systems often suffer from hallucinations due to poor retrieval relevance. This project leverages **Elastic Agent Builder** to orchestrate a "Self-Correction" loop. By integrating **JinaAI Reranker v3**, the agent evaluates the quality of retrieved context in real-time.
 
 ### **Core Innovation: The Self-Correction Loop**
+
 ```mermaid
 graph TD
     A[User Query] --> B{Elastic Hybrid Search}
@@ -17,11 +18,8 @@ graph TD
     
     style E fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#ff9,stroke:#333,stroke-width:2px
-    
-    style E fill:#f9f,stroke:#333,stroke-width:2px
-    style F fill:#ff9,stroke:#333,stroke-width:2px
 
-    🛠️ Tech Stack
+🛠️ Tech Stack
 Vector Database: Elasticsearch (Hybrid Search: BM25 + Dense Vector)
 
 Orchestration: Elastic Agent Builder
@@ -30,6 +28,7 @@ Reranking: JinaAI Reranker v3 (via Elastic Inference API)
 
 Embeddings: jina-embeddings-v3 (Multilingual support)
 
+📂 Project Structure
 ├── data/               # Sample dataset for indexing
 ├── mappings/           # Elasticsearch index & inference configurations
 │   ├── index_settings.json
@@ -46,8 +45,9 @@ An Elastic Cloud account (Serverless or Stack 8.12+)
 A JinaAI API Key
 
 2. Setup Environment
-   # Clone the repository
-git clone https://github.com/ShitalRavindraJagtap/Elastic-Agentic-RAG-Self-Correction.git
+
+# Clone the repository
+git clone [https://github.com/ShitalRavindraJagtap/Elastic-Agentic-RAG-Self-Correction.git](https://github.com/ShitalRavindraJagtap/Elastic-Agentic-RAG-Self-Correction.git)
 cd Elastic-Agentic-RAG-Self-Correction
 
 # Install dependencies
@@ -55,6 +55,7 @@ pip install -r requirements.txt
 
 3. Configuration
 Create a .env file in the root directory based on .env.example:
+
 ELASTIC_CLOUD_ID="your_cloud_id"
 ELASTIC_API_KEY="your_api_key"
 JINA_API_KEY="your_jina_key"
@@ -74,4 +75,5 @@ Elastic Team for the Agent Builder framework.
 
 Jina AI for the state-of-the-art Reranker v3.
 
-Ashish Tiwari for the inspiration during the Blogathon 2026.
+Ashish Tiwari for the inspiration during the #ElasticBlogathon2026.
+
